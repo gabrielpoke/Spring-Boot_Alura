@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+</head>
+<body>
+    <div>
+        <div> Nome do produto: <span th:text = "${nomeProduto}"></span></div>
+        <div> Valor: <span th:text="${valorProduto}"> </span></div>
+        <div> Data da entrega: <span th:text = "${dataEntrega}"> </span></div>
+
+        <div> Produto: </div>
+        <div> URL do produto: <span th:text ="${urlProduto}"></span></div>
+        <div> Descrições: </div>
+        <div>
+            <textarea> Descrição dos pedidos... </textarea>
+        </div>
+
+        <div>
+            <img src=""/>
+        </div>
+    </div>
+</body>
+</html>
