@@ -5,20 +5,20 @@
     <title>Home page</title>
 </head>
 <body>
-    <div>
-        <div> Nome do produto: <span th:text = "${nomeProduto}"></span></div>
-        <div> Valor: <span th:text="${valorProduto}"> </span></div>
-        <div> Data da entrega: <span th:text = "${dataEntrega}"> </span></div>
+    <div th:each="pedido: ${pedidos}">
+        <div> Nome do produto: <span th:text = "${pedido.nomeProduto}"></span></div>
+        <div> Valor: <span th:text="${pedido.valorNegociado}"> </span></div>
+        <div> Data da entrega: <span th:text = "${pedido.dataDaEntrega}"> </span></div>
 
         <div> Produto: </div>
-        <div> URL do produto: <span th:text ="${urlProduto}"></span></div>
+        <div> <input value ="URL do produto" th:value ="${pedido.urlProduto}"/> </div>
         <div> Descrições: </div>
         <div>
-            <textarea> Descrição dos pedidos... </textarea>
+            <textarea th:text="${pedido.descricao}"> Descrição dos pedidos... </textarea>
         </div>
 
         <div>
-            <img src=""/>
+            <img th:src="${pedido.urlImagem}"/>
         </div>
     </div>
 </body>
