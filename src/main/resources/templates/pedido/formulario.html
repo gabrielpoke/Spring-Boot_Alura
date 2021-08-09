@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title> Formulário </title>
+</head>
+<body>
+    <div class="container">
+        <div class="container-fluid bg-secondary text-light p-5">
+            <h1 class="display-4"> Novo pedido </h1>
+        </div>
+        <form action="/pedido/novo" method="POST">
+            <div>
+                <label for="nomeProduto"> Produto </label>
+                <input name="nomeProduto" placeholder=" nome do produto "/>
+                <small> Informe qual é o nome do produto </small>
+            </div>
+            <div>
+                <label for="urlProduto"> Url </label>
+                <input name="urlProduto" placeholder=" Url do produto "/>
+                <small> Procure em um site o produto que você deseja e coloe a url da página aqui </small>
+            </div>
+            <div>
+                <label for="urlImagem"> Imagem </label>
+                <input name="urlImagem" placeholder=" Url do imagem "/>
+                <small> Copie a Url de uma boa imagem do produto e cole aqui para ajudar a conseguir compradores </small>
+            </div>
+            <div>
+                <label for="descricao"> </label>
+                <textarea name="descricao" placeholder=" Adcione detalhes importantes para ajudar o comprador "></textarea>
+            </div>
+
+            <button type="submit"> Cadastrar </button>
+    </form>
+
+    </div>
+</body>
+</html>
