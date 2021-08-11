@@ -1,10 +1,7 @@
 package br.com.alura.mvc.mudi.Models;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
@@ -26,6 +23,17 @@ public class Pedido {
     private String urlImagem;
 
     private String descricao;
+
+    @Enumerated(EnumType.STRING)
+    private StatutsPedido statutsPedido;
+
+    public StatutsPedido getStatutsPedido() {
+        return statutsPedido;
+    }
+
+    public void setStatutsPedido(StatutsPedido statutsPedido) {
+        this.statutsPedido = statutsPedido;
+    }
 
     public String getNomeProduto() {
         return nomeProduto;
