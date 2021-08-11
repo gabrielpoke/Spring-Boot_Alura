@@ -62,7 +62,7 @@ public class RequsicaoNovoPedido {
 
         pedido.setDescricao(descricao);
 
-        pedido.setStatutsPedido(StatutsPedido.AGUARDANDO);
+        pedido.setStatus(StatutsPedido.AGUARDANDO);
 
         return pedido;
     }

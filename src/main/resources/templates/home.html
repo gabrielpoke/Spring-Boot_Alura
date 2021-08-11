@@ -13,16 +13,16 @@
 
         <nav class="navbar navbar-expand navbar-light bg-light d-flex justify-content-between">
             <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="">Todos</a>
-                <a class="nav-item nav-link" href="">Aguardando</a>
-                <a class="nav-item nav-link" href="">Aprovado</a>
-                <a class="nav-item nav-link" href="">Entregue</a>
+                <a th:classappend="${status} == null ? 'active'" class="nav-item nav-link" href="/home">Todos</a>
+                <a th:classappend="${status} == 'aguardando' ? 'active'" class="nav-item nav-link" href="/home/aguardando">Aguardando</a>
+                <a th:classappend="${status} == 'aprovado' ? 'active'" class="nav-item nav-link" href="/home/aprovado">Aprovado</a>
+                <a th:classappend="${status} == 'entregue' ? 'active'" class="nav-item nav-link" href="/home/entregue">Entregue</a>
             </div>
             <a href="/pedido/formulario"><button class="btn btn-outline-secondary mr-2">Novo</button></a>
         </nav>
         <div class="card mb-3 mt-3" th:each="pedido: ${pedidos}">
 
-            <th:block th:switch="${pedido.statutsPedido.name()}">
+            <th:block  th:switch="${pedido.status.name()}">
                 <div th:case="AGUARDANDO" class="card-header alert-warning">  <span th:text = "${pedido.nomeProduto}"></span></div>
                 <div th:case="APROVADO" class="card-header alert-success">  <span th:text = "${pedido.nomeProduto}"></span></div>
                 <div th:case="ENTREGUE" class="card-header alert-dark">  <span th:text = "${pedido.nomeProduto}"></span></div>

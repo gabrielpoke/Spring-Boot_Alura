@@ -25,14 +25,14 @@ public class Pedido {
     private String descricao;
 
     @Enumerated(EnumType.STRING)
-    private StatutsPedido statutsPedido;
+    private StatutsPedido status;
 
-    public StatutsPedido getStatutsPedido() {
-        return statutsPedido;
+    public StatutsPedido getStatus() {
+        return status;
     }
 
-    public void setStatutsPedido(StatutsPedido statutsPedido) {
-        this.statutsPedido = statutsPedido;
+    public void setStatus(StatutsPedido status) {
+        this.status = status;
     }
 
     public String getNomeProduto() {
